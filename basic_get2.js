@@ -9,6 +9,9 @@ app.get("/room1", (req, res) => {
   res.send("This is room number 1");
 });
 
+
+// http://127.0.0.1:3000/room2/12345 로 GET 요청 시 
+// 브라우져에 "This is room number 2 - table number 12345" 로 표출
 app.get("/room2/:id", (req, res) => {
   let id = req.params.id;
   res.send(`This is room number 2 - table number ${id}`);
